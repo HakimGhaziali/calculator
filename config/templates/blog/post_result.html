@@ -1,0 +1,67 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+
+<h3>calculate new price based on dollar price and past condition </h3>
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+
+<table style="width:100%">
+  <tr>
+    <th>Part Number</th>
+    <th>time research</th>
+    <th>Past Dollar</th>
+    <th>Past Price</th>
+    <th>New Dollar</th>
+    <th>New Price</th>
+    <th>sellers</th>
+  </tr>
+  <tr>
+    <td>{{ x.partnumber }}</td>
+    <th>{{ x.created }}</th>
+    <td>{{ x.past_dollar }}</td>
+    <td>{{ x.past_price }}</td>
+    <td>{{ d2 }}</td>
+    <td>{{ p2 }}</td>
+    <td>{{ x.body }}</td>
+  </tr>
+
+</table>
+
+<br> 
+
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+
+
+
+
+<h2> to create better this website , call hoseinpart. and thank you</h2>
+
+</body>
+</html>
+
+
+  {% endblock content %}

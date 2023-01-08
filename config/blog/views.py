@@ -16,9 +16,10 @@ def post_list(request):
                 d2 = form.cleaned_data['today_dollar']
                 x = Post.objects.get(partnumber=x)
                 p2 = ((int(d2)) * int((x.past_price)))/int((x.past_dollar))
+
             #x = Post.objects.get(partnumber= request.POST.part_number)
             #print(x)
-            context = {'data': int(p2) , 'past_dollar': int(x.past_dollar) , 'past_price': int(x.past_price) }
+            context = {'p2': int(p2) , 'x': x , 'd2': d2 }
 
             return render(request , 'blog/post_result.html' , context )
             #return HttpResponse("gheymat jadid {} nesbat be dollar {} , kasani ke daran: {} ".format(int(p2) , x.past_dollar , x.body))   
