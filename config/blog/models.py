@@ -34,9 +34,6 @@ class Post(models.Model):
     class Meta:
         ordering = ('-publish',)
 
-    #def __str__(self):
-        #return f"{ self.partnumber } and { self.new_price }"
-
     def get_absolute_url(self):
         return reverse('blog:post_detail',
                        args=[self.publish.year,

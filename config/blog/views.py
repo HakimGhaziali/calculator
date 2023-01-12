@@ -16,10 +16,10 @@ def post_list(request):
                 d2 = form.cleaned_data['today_dollar']
                 x = Post.objects.filter(partnumber=x).values()
                 for i in x:
-                    i['newprice'] = (int(d2) * int(i['past_price']))/int(i['past_dollar'])
-                    int(i['past_price']) + 1000
+                    i['newprice'] = int((int(d2) * int(i['past_price']))/int(i['past_dollar']))
+                    i['new_dollar'] = d2
        
-            context = {'x': x}
+            context = {'x': x  }
             return render(request , 'blog/post_result.html' , context )
 
         if request.method == "GET":
