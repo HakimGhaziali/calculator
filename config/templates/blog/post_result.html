@@ -24,9 +24,10 @@ table, th, td {
 <br> 
 <br> 
 
-<table style="width:100%">
+<table style="width:80%">
   <tr>
     <th>Part Number</th>
+    <th>Brand</th>
     <th>time research</th>
     <th>Past Dollar</th>
     <th>Past Price</th>
@@ -34,15 +35,21 @@ table, th, td {
     <th>New Price</th>
     <th>sellers</th>
   </tr>
+  {% for x in x %}
   <tr>
     <td>{{ x.partnumber }}</td>
+    <td>{{ x.brand }}</td>
+
     <th>{{ x.created }}</th>
     <td>{{ x.past_dollar }}</td>
     <td>{{ x.past_price }}</td>
-    <td>{{ d2 }}</td>
-    <td>{{ p2 }}</td>
     <td>{{ x.body }}</td>
+    <td>{{ x.newprice }}</td>
+    <td>{{ x.body }}</td>
+
   </tr>
+  {% endfor %}
+
 
 </table>
 

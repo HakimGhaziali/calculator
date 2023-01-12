@@ -12,6 +12,7 @@ class Post(models.Model):
         ('published', 'Published'),
     )
     partnumber = models.CharField(max_length=250)
+    brand = models.CharField(max_length =300)
     past_price = models.CharField(max_length=250)
     past_dollar = models.CharField(max_length=250)
     
